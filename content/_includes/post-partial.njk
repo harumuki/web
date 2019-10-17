@@ -1,0 +1,46 @@
+{% set class="default" %}
+{% if post.data.photo %}
+{% set class="photo" %}
+{% elif post.data.youtube %}
+{% set class="youtube" %}
+{% endif %}
+
+<div class="post {{ class }}" id="{{ post.fileSlug }}">
+
+{% if post.data.title %}
+<h1>{{ post.data.title }}</h1>
+{% endif %}
+
+{% if post.data.photo %}
+<div class="photo">
+<img src="{{ post.data.photo }}?nf_resize=fit&w=1400"
+  srcset="{{ post.data.photo }}?nf_resize=fit&w=1400 1400w,
+          {{ post.data.photo }}?nf_resize=fit&w=818 818w,
+          {{ post.data.photo }}?nf_resize=fit&w=750 750w,
+          {{ post.data.photo }}?nf_resize=fit&w=400 400w"
+  sizes="100vw">
+{% if post.data.caption %}
+<div class="caption"> {{ post.data.caption | safe }}</div>
+{% endif %}
+</div>
+{% endif %}
+
+{% if post.data.youtube %}
+<div class="youtube">
+<div class="video-container">
+<iframe width="660" height="371" src="https://www.youtube.com/embed/{{ post.data.youtube }}?modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+{% if post.data.caption %}
+<div class="caption"> {{ post.data.caption | safe }}</div>
+{% endif %}
+</div>
+{% endif %}
+
+{{ post.templateContent | safe }} 
+
+{% if blogindex %}
+<div class="meta"><a href="{{ post.url | blogPermalink }}"><i class="icon-clock"></i> {{ post.date | clockTime}}</div>
+{% else %}
+<!-- I want navigation in here someday... -->
+{% endif %}
+</div>

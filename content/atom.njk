@@ -1,0 +1,49 @@
+---
+permalink: /feed.xml
+metadata:
+  title: Duncan Davidson
+  url: https://duncan.dev/
+  author:
+    name: Duncan Davidson
+    email: me@duncandavidson.com
+  feed:
+    subtitle: Posts by Duncan Davidson
+    filename: feed.xml
+    path: feed/feed.xml
+    url: https://duncan.dev/feed.xml
+    id: https://duncan.dev/
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.feed.subtitle }}</subtitle>
+  <link href="{{ metadata.feed.url }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.post | rssLastUpdatedDate }}</updated>
+  <id>{{ metadata.feed.id }}</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+    <email>{{ metadata.author.email }}</email>
+  </author>
+  {%- for post in collections.post | reverse | limit(10) %}
+  {%- set absolutePostUrl %}{{ post.url | blogPermalink | url | absoluteUrl(metadata.url) }}{% endset %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | rssDate }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    {%- if post.data.photo %}
+      {%- set content = '<img src="' + post.data.photo +'"><br>' -%}
+      {%- if post.data.caption -%}
+        {%- set content = content + '<p>' + post.data.caption + '</p>' -%}
+      {%- endif %} 
+      {%- set content = content + post.templateContent -%}
+    {%- elif post.data.youtube %}
+      {%- set content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + post.data.youtube + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>' + post.data.caption + '</p>' + post.templateContent  %}
+    {%- else %}
+      {%- set content = post.templateContent %}
+    {%- endif %}
+    <content type="html">{{ content | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

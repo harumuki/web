@@ -1,0 +1,9 @@
+[build]
+  command = "npm run content"
+  publish = "public_html"
+  environment = { NODE_VERSION = "10" }
+
+[dev]
+  command = "jake serve"
+  publish = "public_html"
+  port = 8080

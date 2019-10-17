@@ -1,0 +1,53 @@
+---
+layout: main
+body: post
+---
+
+{% set post = {
+    'data': {
+        'title': title,
+        'photo': photo,
+        'caption': caption,
+        'youtube' : youtube
+    },
+    'templateContent': content | safe
+} %}
+
+<div class="date">
+{{ date | displayDate }}
+</div>
+
+{% include "post-partial.njk" %}
+{% set currentItemIndex = 0 %}
+
+
+<div class="blogarchivenav">
+{# I hate doing it this way, for the record. #}
+
+{% for item in collections.post %}
+  {% if item.url == page.url %}
+    {% set currentItemIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% set prevItemIndex = currentItemIndex - 1 %}
+{% set nextItemIndex = currentItemIndex + 1 %}
+
+{% if prevItemIndex >= 0 %}
+{% set prev = collections.post[prevItemIndex] %}
+<div class="prev">
+<a href="{{ prev.url }}"><i class="icon-left-circled"></i> Previous</a>
+</div>
+{% endif %}
+{% if nextItemIndex < collections.post.length %}
+{% set next = collections.post[nextItemIndex] %}
+<div class="next">
+<a href="{{ next.url }}">Next <i class="icon-right-circled"></i></a>
+</div>
+{% endif %}
+
+</div>
+
+<footer>
+{% include "face.njk" %}
+</footer>

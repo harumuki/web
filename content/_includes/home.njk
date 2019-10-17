@@ -1,0 +1,16 @@
+---
+layout: main
+body: home
+---
+
+<header>
+{% include "face.njk" %}
+<h1>{{ title }}</h1>
+<p class="lede">{{ lede | safe }}</p>
+</header>
+<article>
+{{ content | safe }}
+</article>
+<footer>
+
+</footer>

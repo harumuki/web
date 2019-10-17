@@ -1,0 +1,26 @@
+---
+layout: main
+body: blog
+title: Duncan's blog
+---
+
+{% set lastdate = "" %}
+{% set blogindex = true %}
+
+{% for post in collections.post | reverse | limit(10) %}
+
+{% set currentdate = post.date | displayDate %}
+{% if lastdate != currentdate %}
+<div class="date">
+{{ currentdate }}
+</div>
+{% set lastdate = currentdate %}
+{% endif %}
+
+{% include "post-partial.njk" %}
+
+{% if not loop.last %}
+<div class="post-seperator"></div>
+{% endif %}
+
+{% endfor %}

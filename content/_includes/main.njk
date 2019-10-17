@@ -1,0 +1,41 @@
+---
+body: default
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+      <title> {{title}} &mdash; Duncan Davidson</title>
+    {% else %}
+      <title>Duncan Davidson</title>
+    {% endif %}
+    
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link rel="alternate" type="application/atom+xml" href="https://duncan.dev/feed.xml">
+  </head>
+  <body class="{{ body }}">
+    <div id="nav">
+      <div id="sitename" style="float: left;"><a href="/">/dev/<strong>duncan</strong></a></div>
+      <div id="sitenav" style="float: right;">
+      <!--<a href="/blog/">blog</a> &bull; -->
+      <a href="/essays/">essays</a> 
+      </div>
+    </div>
+    {{ content | safe }}
+    <div id="footer">
+      <a href="/feed.xml"><i class="icon-rss"></i> feed</a>
+
+      &bull;      
+      
+      <a href="/colophon/">colophon</a>
+
+      &bull;
+      
+      <a href="https://github.com/duncan/website/"><i class="icon-github"></i> source</a>
+
+      <!-- <a href="https://updown.io/x825"><i class="icon-server"></i></a>-->
+    </div>
+  </body>
+</html>
