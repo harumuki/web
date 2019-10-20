@@ -1,7 +1,7 @@
 [build]
-  command = "npm run content"
+  command = "npm run gulp"
   publish = "public_html"
-  environment = { NODE_VERSION = "10", GIT_LFS_ENABLED = "1" }
+  environment = { NODE_VERSION = "12", GIT_LFS_ENABLED = "1" }
 
 [dev]
   command = "jake serve"
