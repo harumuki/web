@@ -2,7 +2,7 @@ const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
   let markdownIt = require("markdown-it");
   let options = {
     html: true,
@@ -17,7 +17,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("content/img");
   eleventyConfig.addPassthroughCopy("content/fonts");
-  eleventyConfig.addPassthroughCopy("content/photos");
 
   eleventyConfig.addFilter("displayDate", require("./filters/displayDate.js"));
   eleventyConfig.addFilter(
@@ -43,7 +42,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("clockTime", require("./filters/clockTime.js"));
   eleventyConfig.addFilter("limit", require("./filters/limit.js"));
 
-  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
