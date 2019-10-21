@@ -39,6 +39,14 @@ module.exports = function (eleventyConfig) {
     "archiveMonthDate",
     require("./filters/archiveMonthDate.js")
   );
+  eleventyConfig.addFilter(
+    "photoTag",
+    require("./filters/photoTag.js")
+  );
+  eleventyConfig.addFilter(
+    "photoTagSingle",
+    require("./filters/photoTagSingle.js")
+  );
   eleventyConfig.addFilter("clockTime", require("./filters/clockTime.js"));
   eleventyConfig.addFilter("limit", require("./filters/limit.js"));
 

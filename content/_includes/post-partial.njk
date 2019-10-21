@@ -13,12 +13,9 @@
 
 {% if post.data.photo %}
 <div class="photo">
-<img src="{{ post.data.photo }}?nf_resize=fit&w=1400"
-  srcset="{{ post.data.photo }}?nf_resize=fit&w=1400 1400w,
-          {{ post.data.photo }}?nf_resize=fit&w=818 818w,
-          {{ post.data.photo }}?nf_resize=fit&w=750 750w,
-          {{ post.data.photo }}?nf_resize=fit&w=400 400w"
-  sizes="100vw">
+
+{{ post.data.photo | photoTag | safe }}
+
 {% if post.data.caption %}
 <div class="caption"> {{ post.data.caption | safe }}</div>
 {% endif %}
