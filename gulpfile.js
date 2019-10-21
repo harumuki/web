@@ -35,32 +35,6 @@ gulp.task('photos', function () {
       progressive: true
     }))
     .pipe(gulp.dest('./public_html/photos'));
-
-
-  // gulp.src('./photos/**/*.jpg')
-  //   .pipe(
-  //     responsive({
-  //       '*': [
-  //         {
-  //           width: 200,
-  //           quality: 50,
-  //           rename: { suffix: '-200px' }
-  //         },
-  //         {
-  //           width: 400,
-  //           quality: 50,
-  //           rename: { suffix: '-400px' }
-  //         },
-  //         {
-  //           width: 600,
-  //           quality: 50,
-  //           rename: { suffix: '-600px' }
-  //         }
-  //       ]
-  //     })
-  //   )
-  //   .pipe(gulp.dest('./public_html/photos'));
-  //done();
 });
 
 gulp.task('css', function () {
