@@ -1,5 +1,5 @@
 [build]
-  command = "npm run gulp"
+  command = "npm run build"
   publish = "public_html"
   environment = { NODE_VERSION = "12", GIT_LFS_ENABLED = "1" }
 
