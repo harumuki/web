@@ -5,6 +5,7 @@ var presetenv = require('postcss-preset-env');
 var shell = require('gulp-shell');
 var cssnano = require('cssnano');
 var resp = require('gulp-responsive');
+var browserSync = require('browser-sync').create();
 
 gulp.task('html', shell.task('eleventy --config=eleventy.js'));
 
@@ -46,6 +47,14 @@ gulp.task('css', function () {
   return gulp.src('./style/main.css')
     .pipe(postcss(plugins))
     .pipe(gulp.dest('./public_html'));
+});
+
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    server: {
+      baseDir: "./public_html"
+    }
+  });
 });
 
 exports.default = gulp.parallel(
