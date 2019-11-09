@@ -20,7 +20,6 @@
   --stepUp3: calc(var(--stepUp2) * var(--ratio));
   --stepUp4: calc(var(--stepUp3) * var(--ratio));
   --sidePagePadding: 16px;
-  --background-color: #ffffff;
   --text-color-primary: #444;
   --text-color-secondary: #777;
   --text-color-headline: #555;
@@ -31,7 +30,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #000;
     --text-color-primary: #ccc;
     --text-color-secondary: #888;
     --text-color-headline: #aaa;
@@ -49,7 +47,6 @@ html {
 body {
   font-family: var(--sans-font-stack);
   -webkit-font-smoothing: antialiased;
-  background: var(--background-color);
   color: var(--text-color-primary);
   margin: 0;
   padding: 0;
