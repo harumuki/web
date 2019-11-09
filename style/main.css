@@ -23,8 +23,20 @@
   --background-color: #ffffff;
   --text-color-primary: #444;
   --text-color-secondary: #777;
+  --text-color-headline: #555;
   --decoration-color: #aaa;
   --link-color: var(--text-color-primary);
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #000;
+    --text-color-primary: #ccc;
+    --text-color-secondary: #888;
+    --text-color-headline: #aaa;
+    --decoration-color: #666;
+  }
 }
 
 @custom-media --narrow-window (max-width: 632px);
@@ -340,7 +352,7 @@ body.post li {
   font-size: var(--stepUp1);
   line-height: 28px;
   font-weight: 700;
-  color: #555;
+  color: var(-text-color-headline);
 }
 
 .post + .post {
