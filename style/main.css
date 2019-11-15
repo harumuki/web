@@ -187,10 +187,11 @@ pre code.langauge-bash {
   height: 50px;
   font-size: 15px;
   color: #a0a0a0;
+  font-size: var(--stepUp1);
 }
 
 #sitename {
-  font-size: var(--stepUp1);
+  
 }
 
 #sitenav {
