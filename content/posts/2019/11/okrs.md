@@ -3,7 +3,7 @@ date: 2019-11-29T13:00:00+02:00
 title: How (not) to destroy an aspirational OKR
 ---
 
-Imagine you’re in a meeting with some of your company’s management in a monthly status meeting. It’s halfway through the year. You’re reviewing your group’s OKRs ([Objectives and Key Results](https://www.whatmatters.com/faqs/okr-meaning-definition-example), for those of you that haven’t heard the acronym before -- it’s [the latest management by objective hotness with its own TED talk](https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals/transcript?language=en). One of your objectives has a key result of finding 5000 dingleberries for the year. That’s pretty aspirational, given that you only found 1200 last year. 
+Imagine you’re in a meeting with some of your company’s management in a monthly status meeting. It’s halfway through the year. You’re reviewing your group’s OKRs ([Objectives and Key Results](https://www.whatmatters.com/faqs/okr-meaning-definition-example), for those of you that haven’t heard the acronym before -- it’s [the latest management by objective hotness with its own TED talk](https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals/transcript?language=en)). One of your objectives has a key result of finding 5000 dingleberries for the year. That’s pretty aspirational, given that you only found 1200 last year. 
 
 It’s good to have a challenge. Nobody in the group knew if there was a way to get to 5000, but setting the goal means that your team would go and try to see if there was a way to acquire significantly more dingleberries than ever before. 
 
