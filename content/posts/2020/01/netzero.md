@@ -11,15 +11,19 @@ The magic in what was announced yesterday comes down to two very important, yet 
 
 Net zero means going beyond relying on the promises of offsets and moving to actively remove the carbon from the atmosphere. And, for a company the size of Microsoft, it at means using technology that isn't yet commercially viable. Yes, the technology exists. It’s still too expensive, however, to deploy at scale. That needs to change.
 
-That can change. And it will require large companies and governments to do something on the scale of what Microsoft is doing.  I hope every company joins Microsoft on this commitment. And, even if I don’t work at Microsoft in 10 years, I hope to be celebrating its accomplishment in meeting its goals.
+That can change. And it will require large companies and governments to do something on the scale of what Microsoft is doing.  I hope every company joins Microsoft on this commitment. And, even if I don’t work at Microsoft in 10 years, I hope to be celebrating its accomplishment in meeting its goals. And I hope to celebrate my 80th birthday by seeing Microsoft follow through on its commitment to remove all the carbon it has ever put into the atmosphere. And I hope that work makes it feasible for me to remove all the carbon that I’m responsible for emitting in my life by my 80th birthday.
 
-The question that’s on my mind now is what individual action can I take, especially as an individual that works at a company that just made this audacious announcement. 
+Imagine that.
+
+Back to the present, the question that’s on my mind right now is what individual action can I take, especially as an individual that works at a company that just made this audacious announcement. 
 
 The answer in [Brad Smith’s blog post about the announcement][2] where he makes a call for employees to participate in this initiative: 
 
 >  Finally, we’ll capitalize on the energy and intellect of our employees by inviting and encouraging them to participate in our carbon reduction and removal efforts. As we’ve found with Microsoft’s accessibility efforts, we believe that sustainability is a cause that is not only important to our employees, but an area where they can generate important insights and innovations across the company.
 
-I work at Microsoft for Startups, which means it’s my job to help startups. Over the last few months, I've been thinking about and talking with my management and teammates about how to focus on _helping startups that are helping fight the climate crisis_.  That discussion will continue over the weeks to come, but thanks to Brad’s call, I’ll be putting even more emphasis on it.
+I work at Microsoft for Startups, which means it’s my job to help startups. Over the last few months, I've been thinking about and talking with my management and teammates about how to focus on _helping startups that are helping fight the climate crisis_.  That discussion will continue over the weeks to come.
+
+Thanks to Brad’s call, it’ll be getting even more emphasis.
 
 
 [1]:	https://news.microsoft.com/climate/
