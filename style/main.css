@@ -285,7 +285,7 @@ footer .face {
 }
 
 body.home .lede {
-  font-size: var(--stepUp2);
+  font-size: var(--stepUp1);
   line-height: 36px;
   font-weight: 700;
 }
@@ -297,8 +297,9 @@ body.home .lede2 {
 }
 
 body.page .lede {
-  font-size: var(--stepUp2);
-  line-height: 36px;
+  font-size: var(--stepUp1);
+  color: var(--text-color-secondary);
+  line-height: 28px;
   font-weight: 700;
 }
 
@@ -328,18 +329,20 @@ body.blog .post h1 {
 
 body.home ul,
 body.blog ul,
-body.post ul {
+body.post ul,
+body.page ul {
   max-width: var(--columnWidth);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 48px;
+  padding-left: 50px;
   padding-right: var(--sidePagePadding);
   color: var(--decoration-color);
 }
 
 body.home li,
 body.blog li,
-body.post li {
+body.post li,
+body.page li {
   color: var(--text-color-primary);
   margin-top: 6px;
   margin-bottom: 6px;
@@ -423,6 +426,8 @@ div.youtube {
   max-width: var(--heroImageWidth);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   /* margin-bottom: 42px; */
 }
 
