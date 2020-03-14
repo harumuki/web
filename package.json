@@ -32,7 +32,7 @@
     "@types/jake": "0.0.31",
     "@types/mocha": "^7.0.1",
     "@types/node": "^13.5.2",
-    "acorn": "^7.1.0",
+    "acorn": "^7.1.1",
     "autoprefixer": "^9.7.4",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
