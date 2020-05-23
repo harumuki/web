@@ -15,6 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
+  eleventyConfig.addPassthroughCopy("content/routes.json");
   eleventyConfig.addPassthroughCopy("content/img");
   eleventyConfig.addPassthroughCopy("content/fonts");
 
