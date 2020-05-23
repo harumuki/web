@@ -1,5 +1,5 @@
 [build]
   base = "static"
   command = "npm run build"
-  publish = "static/public_html"
+  publish = "public_html"
   environment = { NODE_VERSION = "12", GIT_LFS_ENABLED = "1" }
