@@ -11,7 +11,7 @@ gulp.task('html', shell.task('eleventy --config=eleventy.js'));
 
 gulp.task('photos', function () {
   const glob = require('glob');
-  return gulp.src('./static/photos/**/*.jpg')
+  return gulp.src('./photos/**/*.jpg')
     .pipe(resp({
       '**/*.jpg': [
         {
@@ -44,7 +44,7 @@ gulp.task('css', function () {
     presetenv({ browsers: ['last 2 versions'], stage: 0, }),
     cssnano
   ];
-  return gulp.src('./static/style/main.css')
+  return gulp.src('./style/main.css')
     .pipe(postcss(plugins))
     .pipe(gulp.dest('./public_html'));
 });

@@ -1,9 +1,5 @@
 [build]
+  base = "static"
   command = "npm run build"
-  publish = "public_html"
+  publish = "static/public_html"
   environment = { NODE_VERSION = "12", GIT_LFS_ENABLED = "1" }
-
-[dev]
-  command = "jake serve"
-  publish = "public_html"
-  port = 8080

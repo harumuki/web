@@ -15,40 +15,40 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addPassthroughCopy("static/content/img");
-  eleventyConfig.addPassthroughCopy("static/content/fonts");
+  eleventyConfig.addPassthroughCopy("content/img");
+  eleventyConfig.addPassthroughCopy("content/fonts");
 
-  eleventyConfig.addFilter("displayDate", require("./static/filters/displayDate.js"));
+  eleventyConfig.addFilter("displayDate", require("./filters/displayDate.js"));
   eleventyConfig.addFilter(
     "parseDateFromYearMonth",
-    require("./static/filters/parseDateFromYearMonth.js")
+    require("./filters/parseDateFromYearMonth.js")
   );
   eleventyConfig.addFilter(
     "archiveHeaderDate",
-    require("./static/filters/archiveHeaderDate.js")
+    require("./filters/archiveHeaderDate.js")
   );
   eleventyConfig.addFilter(
     "blogPermalink",
-    require("./static/filters/blogPermalink.js")
+    require("./filters/blogPermalink.js")
   );
   eleventyConfig.addFilter(
     "blogArchivelink",
-    require("./static/filters/blogArchivelink.js")
+    require("./filters/blogArchivelink.js")
   );
   eleventyConfig.addFilter(
     "archiveMonthDate",
-    require("./static/filters/archiveMonthDate.js")
+    require("./filters/archiveMonthDate.js")
   );
   eleventyConfig.addFilter(
     "photoTag",
-    require("./static/filters/photoTag.js")
+    require("./filters/photoTag.js")
   );
   eleventyConfig.addFilter(
     "photoTagSingle",
-    require("./static/filters/photoTagSingle.js")
+    require("./filters/photoTagSingle.js")
   );
-  eleventyConfig.addFilter("clockTime", require("./static/filters/clockTime.js"));
-  eleventyConfig.addFilter("limit", require("./static/filters/limit.js"));
+  eleventyConfig.addFilter("clockTime", require("./filters/clockTime.js"));
+  eleventyConfig.addFilter("limit", require("./filters/limit.js"));
 
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     if (outputPath.endsWith(".html")) {
@@ -64,7 +64,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: {
-      input: "static/content",
+      input: "content",
       output: "public_html",
       passthroughFileCopy: true
     }
