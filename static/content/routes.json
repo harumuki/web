@@ -1,0 +1,15 @@
+{
+  "routes": [
+    {
+      "route": "/blog",
+      "serve": "/",
+      "statusCode": 301
+    }
+  ],
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/404.html"
+    }
+  ]
+}
