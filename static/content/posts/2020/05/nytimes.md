@@ -3,7 +3,7 @@ date: 2020-05-24T17:25:00.0+02:00
 photo: /photos/2020/05/nytimes.jpg
 ---
 
-Decades of work undermined the ability of America to govern itself effectively has resulted in this tragedy, [an incalculable loss](https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html). Convinced that government was too incapble to govern, and attracted to the prospect of profitably taking it apart, a group of people have managed to make that reality come true through exploiting division and fear.
+Decades of work undermined the ability of America to govern itself effectively and has resulted in this tragedy, [an incalculable loss](https://www.nytimes.com/interactive/2020/05/24/us/us-coronavirus-deaths-100000.html). Convinced that government was too incapble to govern, and attracted to the prospect of profitably taking it apart, a group of people have managed to make that reality come true through exploiting division and fear.
 
 This is the reality we have created. One where the threat of a virus can't be effectively responded to with the weight it deserves. 
 
