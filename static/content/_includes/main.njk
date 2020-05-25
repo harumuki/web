@@ -16,9 +16,12 @@ body: default
     <link rel="alternate" type="application/atom+xml" href="https://duncan.dev/feed.xml">
   </head>
   <body class="{{ body }}">
+
+    {% if layout != "home" %}
     <div id="nav">
       <a href="/"><strong>duncan</strong> davidson</a>
     </div>
+    {% endif %}
     {{ content | safe }}
     <div id="footer">
       <a href="/feed.xml"><i class="icon-rss"></i> feed</a>
