@@ -4,6 +4,81 @@
       "route": "/blog",
       "serve": "/",
       "statusCode": 301
+    },
+    {
+      "route": "/blog/atom*",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/feed*",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/index.rss",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/index.xml",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/rss*",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/xml",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/rdf",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/blog/*",
+      "serve": "/",
+      "statusCode": 301
+    },
+    {
+      "route": "/rss*",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/index.rss",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/index.xml",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/xml*",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/atom*",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/feed",
+      "serve": "/feed.xml",
+      "statusCode": 301
+    },
+    {
+      "route": "/feed/*",
+      "serve": "/feed.xml",
+      "statusCode": 301
     }
   ],
   "platformErrorOverrides": [
