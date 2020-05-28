@@ -7,7 +7,7 @@
 :root {
   --sans-font-stack: -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans,
     Ubuntu, Cantarell, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --mono-font-stack: "SF Mono", "Menlo", "DejaVu Sans Mono",
+  --mono-font-stack: "Cascadia Code", "SF Mono", "Menlo", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", Courier, monospace;
   --columnWidth: 550px;
   --heroImageWidth: calc(var(--columnWidth) * 1.2);
