@@ -2,16 +2,16 @@
 permalink: /feed.xml
 metadata:
   title: Duncan Davidson
-  url: https://duncan.dev/
+  url: https://www.duncandavidson.com/
   author:
     name: Duncan Davidson
-    email: me@duncandavidson.com
+    email: duncandavidson@me.com
   feed:
     subtitle: Posts by Duncan Davidson
     filename: feed.xml
     path: feed/feed.xml
-    url: https://duncan.dev/feed.xml
-    id: https://duncan.dev/
+    url: https://www.duncandavidson.com/feed.xml
+    id: https://www.duncandavidson.com/
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -25,7 +25,7 @@ metadata:
     <name>{{ metadata.author.name }}</name>
     <email>{{ metadata.author.email }}</email>
   </author>
-  {%- for post in collections.post | reverse | limit(10) %}
+  {%- for post in collections.post | reverse | limit(1) %}
   {%- set absolutePostUrl %}{{ post.url | blogPermalink | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
