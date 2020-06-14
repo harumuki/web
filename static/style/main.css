@@ -35,6 +35,9 @@
     --text-color-headline: #aaa;
     --decoration-color: #666;
   }
+  img.invertable {
+    filter: invert(1);
+  }
 }
 
 @custom-media --narrow-window (max-width: 632px);
@@ -52,11 +55,17 @@ body {
   padding: 0;
 }
 
+body header {
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
 h1,
 h2,
 h3,
 p,
 li,
+header,
 .hero > .credit,
 .page header .date,
 .social {
