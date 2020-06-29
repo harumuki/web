@@ -39,7 +39,7 @@ metadata:
       {%- endif %} 
       {%- set content = content + post.templateContent -%}
     {%- elif post.data.youtube %}
-      {%- set content = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + post.data.youtube + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>' + post.data.caption + '</p>' + post.templateContent  %}
+      {%- set content = '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' + post.data.youtube + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>' + post.data.caption + '</p>' + post.templateContent  %}
     {%- else %}
       {%- set content = post.templateContent %}
     {%- endif %}
