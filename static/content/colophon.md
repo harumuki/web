@@ -7,7 +7,7 @@ layout: main
 
 ## Infrastructure
 
-This site is built and hosted using [Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/overview??WT.mc_id=personal-blog-duncand).
+This site is built and hosted using [Azure Static Web Apps](https://docs.microsoft.com/en-us/azure/static-web-apps/overview?WT.mc_id=personal-blog-duncand).
 
 ## Images
 
