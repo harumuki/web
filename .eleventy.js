@@ -67,6 +67,9 @@ module.exports = function (eleventyConfig) {
     dir: {
       input: "content",
       output: "public_html",
+      layouts: "../layouts",
+      includes: "../includes",
+      data: "../data",
       passthroughFileCopy: true
     }
   };
