@@ -6,8 +6,8 @@
   "scripts": {
     "content": "gulp",
     "css": "postcss --config style -o public_html/style.css style/main.css",
-    "html": "eleventy --config=eleventy.js",
-    "serve": "eleventy --config=eleventy.js --serve",
+    "html": "eleventy",
+    "serve": "eleventy --serve",
     "verify": "mocha -r ts-node/register verify/**/*.ts",
     "build": "gulp"
   },
