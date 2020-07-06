@@ -7,7 +7,7 @@ var cssnano = require('cssnano');
 var resp = require('gulp-responsive');
 var browserSync = require('browser-sync').create();
 
-gulp.task('html', shell.task('eleventy --config=eleventy.js'));
+gulp.task('html', shell.task('eleventy'));
 
 gulp.task('photos', function () {
   const glob = require('glob');
