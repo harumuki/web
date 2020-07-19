@@ -2,11 +2,11 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "dnszones_duncan_dev_name": {
+        "domainName": {
             "defaultValue": "duncan.dev",
             "type": "String"
         },
-        "profiles_cdn_externalid": {
+        "cdnId": {
             "defaultValue": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/microsoft.cdn/profiles/cdn')]",
             "type": "String"
         }
@@ -16,7 +16,7 @@
         {
             "type": "Microsoft.Network/dnszones",
             "apiVersion": "2018-05-01",
-            "name": "[parameters('dnszones_duncan_dev_name')]",
+            "name": "[parameters('domainName')]",
             "location": "global",
             "properties": {
                 "zoneType": "Public"
@@ -25,37 +25,37 @@
         {
             "type": "Microsoft.Network/dnszones/A",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/@')]",
+            "name": "[concat(parameters('domainName'), '/@')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
                 "targetResource": {
-                    "id": "[concat(parameters('profiles_cdn_externalid'), '/endpoints/duncandavidson-redirect')]"
+                    "id": "[concat(parameters('cdnId'), '/endpoints/duncandavidson-redirect')]"
                 }
             }
         },
         {
             "type": "Microsoft.Network/dnszones/A",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/www')]",
+            "name": "[concat(parameters('domainName'), '/www')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
                 "targetResource": {
-                    "id": "[concat(parameters('profiles_cdn_externalid'), '/endpoints/duncandavidson-redirect')]"
+                    "id": "[concat(parameters('cdnId'), '/endpoints/duncandavidson-redirect')]"
                 }
             }
         },
         {
             "type": "Microsoft.Network/dnszones/CNAME",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/_4578bf17e3dae95395cf805c40578763')]",
+            "name": "[concat(parameters('domainName'), '/_4578bf17e3dae95395cf805c40578763')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
@@ -68,9 +68,9 @@
         {
             "type": "Microsoft.Network/dnszones/CNAME",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/_77a525b866ff828db8ef6370457318a9')]",
+            "name": "[concat(parameters('domainName'), '/_77a525b866ff828db8ef6370457318a9')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
@@ -83,9 +83,9 @@
         {
             "type": "Microsoft.Network/dnszones/CNAME",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/_8d94d766b6171d601dec959848f46339')]",
+            "name": "[concat(parameters('domainName'), '/_8d94d766b6171d601dec959848f46339')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 60,
@@ -98,9 +98,9 @@
         {
             "type": "Microsoft.Network/dnszones/CNAME",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/cdnverify')]",
+            "name": "[concat(parameters('domainName'), '/cdnverify')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
@@ -113,9 +113,9 @@
         {
             "type": "Microsoft.Network/dnszones/CNAME",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/cdnverify.www')]",
+            "name": "[concat(parameters('domainName'), '/cdnverify.www')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
@@ -128,9 +128,9 @@
         {
             "type": "Microsoft.Network/dnszones/MX",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/@')]",
+            "name": "[concat(parameters('domainName'), '/@')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
@@ -150,9 +150,9 @@
         {
             "type": "Microsoft.Network/dnszones/NS",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/@')]",
+            "name": "[concat(parameters('domainName'), '/@')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 172800,
@@ -176,9 +176,9 @@
         {
             "type": "Microsoft.Network/dnszones/SOA",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/@')]",
+            "name": "[concat(parameters('domainName'), '/@')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
@@ -197,9 +197,9 @@
         {
             "type": "Microsoft.Network/dnszones/TXT",
             "apiVersion": "2018-05-01",
-            "name": "[concat(parameters('dnszones_duncan_dev_name'), '/@')]",
+            "name": "[concat(parameters('domainName'), '/@')]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_duncan_dev_name'))]"
+                "[resourceId('Microsoft.Network/dnszones', parameters('domainName'))]"
             ],
             "properties": {
                 "TTL": 3600,
