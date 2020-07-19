@@ -1,0 +1,252 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "dnszones_x180_com_name": {
+            "defaultValue": "x180.com",
+            "type": "String"
+        },
+        "profiles_cdn_externalid": {
+            "defaultValue": "/subscriptions/a8897825-b6d2-440e-b74d-6b9d77a64c74/resourceGroups/duncandavidson.com/providers/microsoft.cdn/profiles/cdn",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.Network/dnszones",
+            "apiVersion": "2018-05-01",
+            "name": "[parameters('dnszones_x180_com_name')]",
+            "location": "global",
+            "properties": {
+                "zoneType": "Public"
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/@')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[concat(parameters('profiles_cdn_externalid'), '/endpoints/duncandavidson-redirect')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/A",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/www')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "targetResource": {
+                    "id": "[concat(parameters('profiles_cdn_externalid'), '/endpoints/duncandavidson-redirect')]"
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/_4578bf17e3dae95395cf805c40578763')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "CNAMERecord": {
+                    "cname": "DDD4A93B7CADFC3597B722B28D25E2B9.9C73A86413E0A82BBC7828E8B94FCDC1.fd708e11890c6f8.comodoca.com"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/_77a525b866ff828db8ef6370457318a9')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "CNAMERecord": {
+                    "cname": "45CB8C1F2309882139DD57DF3B0D79B5.F781520DEA9836E2296DC0CDB5EF35F3.30ca75235510c60.comodoca.com"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/_9e644b04342fcb6237fc10e44fa74539')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 60,
+                "CNAMERecord": {
+                    "cname": "DE601E0184C2006DE576A404F51AC7A5.6A572E215840D41A945C88F28A7E9874.d89fa0705eac6fb.comodoca.com"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/blog')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "CNAMERecord": {
+                    "cname": "duncandavidson.netlify.com"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/cdnverify')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "CNAMERecord": {
+                    "cname": "cdnverify.duncandavidson-redirect.azureedge.net"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/CNAME",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/cdnverify.www')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "CNAMERecord": {
+                    "cname": "cdnverify.duncandavidson-redirect.azureedge.net"
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/MX",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/@')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "MXRecords": [
+                    {
+                        "exchange": "mx1.forwardemail.net",
+                        "preference": 10
+                    },
+                    {
+                        "exchange": "mx2.forwardemail.net",
+                        "preference": 20
+                    }
+                ],
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/NS",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/@')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 172800,
+                "NSRecords": [
+                    {
+                        "nsdname": "ns1-09.azure-dns.com."
+                    },
+                    {
+                        "nsdname": "ns2-09.azure-dns.net."
+                    },
+                    {
+                        "nsdname": "ns3-09.azure-dns.org."
+                    },
+                    {
+                        "nsdname": "ns4-09.azure-dns.info."
+                    }
+                ],
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/SOA",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/@')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "SOARecord": {
+                    "email": "azuredns-hostmaster.microsoft.com",
+                    "expireTime": 2419200,
+                    "host": "ns1-09.azure-dns.com.",
+                    "minimumTTL": 300,
+                    "refreshTime": 3600,
+                    "retryTime": 300,
+                    "serialNumber": 1
+                },
+                "targetResource": {}
+            }
+        },
+        {
+            "type": "Microsoft.Network/dnszones/TXT",
+            "apiVersion": "2018-05-01",
+            "name": "[concat(parameters('dnszones_x180_com_name'), '/@')]",
+            "dependsOn": [
+                "[resourceId('Microsoft.Network/dnszones', parameters('dnszones_x180_com_name'))]"
+            ],
+            "properties": {
+                "TTL": 3600,
+                "TXTRecords": [
+                    {
+                        "value": [
+                            "google-site-verification=E7Mlzf_nwAJkvnhPym07Nll5GQscy83H0qFKRr6vGFI"
+                        ]
+                    },
+                    {
+                        "value": [
+                            "forward-email=jduncand@outlook.com"
+                        ]
+                    },
+                    {
+                        "value": [
+                            "v=spf1 a mx include:spf.forwardemail.net include:_spf.google.com -all"
+                        ]
+                    },
+                    {
+                        "value": [
+                            "v=DMARC1; p=none; pct=100; rua=mailto:re+tek5b2v6lmj@dmarc.postmarkapp.com; sp=none; aspf=r;"
+                        ]
+                    },
+                    {
+                        "value": [
+                            "have-i-been-pwned-verification=50a4866f75fef5c0db74d01000c5b8d8"
+                        ]
+                    }
+                ],
+                "targetResource": {}
+            }
+        }
+    ]
+}
