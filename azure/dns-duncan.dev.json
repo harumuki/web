@@ -7,7 +7,7 @@
             "type": "String"
         },
         "profiles_cdn_externalid": {
-            "defaultValue": "/subscriptions/a8897825-b6d2-440e-b74d-6b9d77a64c74/resourceGroups/duncandavidson.com/providers/microsoft.cdn/profiles/cdn",
+            "defaultValue": "[concat('/subscriptions/', subscription().subscriptionId, '/resourceGroups/', resourceGroup().name, '/providers/microsoft.cdn/profiles/cdn')]",
             "type": "String"
         }
     },
