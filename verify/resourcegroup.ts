@@ -8,9 +8,10 @@ describe("resource group duncandavidson.com", () => {
     exec('az group show -n duncandavidson.com', (err, stdout, stderr) => {
       if (!err) {
         group = JSON.parse(stdout)
+        done()
+      } else {
+        done()
       }
-
-      done()
     })
   })
 
