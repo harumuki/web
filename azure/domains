@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+az deployment group create -c -g domains --template-file azure/domains.json --mode Complete
