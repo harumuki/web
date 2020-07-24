@@ -30,9 +30,9 @@ The check in counters were nicely fortified with plexiglass screens, but the cle
 
 {{ "/photos/2020/07/coronaflug/txl-security.jpg" | photoTagSingle | safe }}
 
-After check in, we moved onto the next hurdle: security. The staffers at Tegal were very serious about allowing only one carry-on. No personal items. Between Katerina, kiddo, and I, we had three primary carry-ons, but we also had a tiny kids backpack for kiddo that I hoped would pass as a "personal item". Nope. No joy. We ended up stuffing it into one of our other bags.
+After check in, we moved onto the next hurdle: security. The staffers at Tegal were very serious about allowing only one carry-on. No personal items. Between Katerina, kiddo, and I, we had three primary carry-ons, but we also had a tiny kids backpack for kiddo that I hoped would pass as a "personal item". Nope. No joy. We ended up stuffing it into one of our other bags. Good thing it was so small.
 
-Once we met the strict limits, the process was easy enough. No lines. Just the usual drill. Katerina did have a rude surprise when one of the security people took her glasses off her face, then handed them back after asking if Katerina could see without them. Of course, the gloves protecting the security person would have put whatever they'd picked up from other passengers on her glasses. Needless to say, the glasses got extra attention with alcohol after we were done with security.
+Once we met the letter of the limits, the process was easy enough. No lines. Just the usual drill. Katerina did have a rude surprise when one of the security people took her glasses off her face, then handed them back after asking if Katerina could see without them. Of course, the gloves protecting the security person would have put whatever they'd picked up from other passengers on her glasses. Needless to say, the glasses got extra attention with alcohol after we were done with security.
 
 Next up: Duty free. The store was creepily empty. We're not big duty free shoppers, and we didn't stick around, but I felt a bit bad for the employees there. None of them were wearing masks, however, which struck me as really strange. I’m not sure if they would have put a mask on if somebody had approached them, but I had no interest in finding out. 
 
