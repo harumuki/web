@@ -1,4 +1,4 @@
-name: Check Markdown links
+name: Daily Link Check
 
 on: 
   schedule:
