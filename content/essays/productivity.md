@@ -27,8 +27,6 @@ Pick a tool. Any tool. And use it every day.
 
 So it’s easy, right? Just spend some time every day, right? Right. That’s much easier said than done. There’s only one thing I’ve ever found that makes sure I stay on track: a repeating calendar appointment that blocks out the time.
 
-![](/img/calendar.png)
-
 I have two repeating appointments that I block out:
 
 - 15 minutes every weekday, to plan for the day.
