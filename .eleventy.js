@@ -63,6 +63,9 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  eleventyConfig.addPassthroughCopy("posts/*.png");
+  eleventyConfig.addPassthroughCopy("posts/*.jpg");
+
   return {
     dir: {
       input: "content",
