@@ -4,7 +4,7 @@ photo: /photos/2019/09/hands.jpg
 title: Five months
 ---
 
-[Five months ago](/posts/2019/04/dont-leave), I said to my son: “When I’m older, and I get sick sometime, you’ll come and see me, won’t you?”
+[Five months ago](https://duncandavidson.com/posts/2019/04/dont-leave), I said to my son: “When I’m older, and I get sick sometime, you’ll come and see me, won’t you?”
 
 Five months ago, my Dad had a major stroke that put him into the hospital and I flew back to the States to see him. At first, the treatments looked to be working well. The doctors were cautiously upbeat with the goal of getting him home. A fairly good recovery seemed possible. Maybe he wouldn’t drive again, but he’d be able to go home and enjoy life.
 
