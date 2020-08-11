@@ -2,6 +2,12 @@
     "ignorePatterns": [
         {
             "pattern": "^https://www.linkedin.com/in/"
+        },
+        {
+            "pattern": "^/.*.png$"
+        },
+        {
+            "pattern": "^/.*.jpg$"
         }
     ],
     "replacementPatterns": [
