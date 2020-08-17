@@ -81,34 +81,39 @@ h2,
 h3 {
   font-weight: 700;
 }
-
+/* 
 .social {
   margin-top: 48px;
-}
+} */
 
 h1 {
-  font-size: var(--stepUp2);
+  font-size: var(--stepUp1);
+  text-align: center;
 }
-
+/* 
 article h1 {
   font-size: var(--stepUp2);
-}
+} */
 
 h2 {
-  font-size: var(--stepUp2);
+  font-size: var(--baseFontSize);
+  text-align: center;
+  margin-top: 2em;
 }
-
+/* 
 article h2 {
   font-size: var(--stepUp1);
-}
+} */
 
 h3 {
-  font-size: var(--stepUp1);
+  font-size: var(--baseFontSize);
+  text-align: center;
+  margin-top: 2em;
 }
-
+/* 
 article h3 {
   font-size: var(--baseFontSize);
-}
+} */
 
 p {
   font-size: var(--baseFontSize);
@@ -221,7 +226,7 @@ pre code.langauge-bash {
   padding-left: var(--sidePagePadding);
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+  text-align: center;
   font-size: 15px;
   color: var(--text-color-secondary);
 }
@@ -232,16 +237,20 @@ pre code.langauge-bash {
 
 .face {
   max-width: var(--columnWidth);
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-height: 100px;
+  width: 100px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
-  min-height: 100px;
 }
 
 .face img {
   border-radius: 100%;
-  float: left;
   margin-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .face .text {
@@ -328,14 +337,17 @@ body.post .date {
   color: var(--text-color-secondary);
   padding-left: var(--sidePagePadding);
   padding-right: var(--sidePagePadding);
+  text-align: center;
 }
 
-body.home .post h1,
-body.blog .post h1 {
-  font-size: var(--stepUp1);
+/* body.home .post h1,
+body.blog .post h1,
+body.post .post h1 {
+  font-size: var(--stepUp2);
   margin-bottom: 0;
   padding-bottom: 0;
-}
+  text-align: center;
+} */
 
 body.home ul,
 body.blog ul,
@@ -522,7 +534,7 @@ li.essay .meta {
   font-size: var(--stepDown1);
   margin-bottom: 3px;
 }
-
+/* 
 @media (--narrow-window) {
   :root {
     --baseFontSize: 15px;
@@ -557,4 +569,4 @@ li.essay .meta {
   body.page .lede {
     line-height: 28px;
   }
-}
+} */

@@ -18,24 +18,21 @@ body: default
   </head>
   <body class="{{ body }}">
 
-    {% if layout != "home" %}
-    <div id="nav">
-      <a href="/"><strong>duncan</strong> davidson</a>
+    <div class="face">
+      <div class="headcircle">
+        <a href="/"><img src="/img/duncan.jpg" width="100" height="100"></a>
+      </div>
     </div>
-    {% endif %}
+
     {{ content | safe }}
+
+
     <div id="footer">
       <a href="/feed.xml"><i class="icon-rss"></i> feed</a>
-
-      &bull;      
-      
+      &bull;            
       <a href="/colophon/">colophon</a>
-
       &bull;
-      
       <a href="https://github.com/duncan/web/"><i class="icon-github"></i> source</a>
-
-
     </div>
   </body>
 </html>
