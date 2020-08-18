@@ -53,5 +53,7 @@
     "ts-node": "^8.10.2",
     "typescript": "^3.9.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "source-sans-pro": "^3.6.0"
+  }
 }
