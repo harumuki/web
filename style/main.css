@@ -40,7 +40,9 @@
   }
 }
 
-@custom-media --narrow-window (max-width: 632px);
+/* @custom-media --narrow-window (max-width: 632px); */
+
+@custom-media --medium-window (min-width: 600px);
 
 html {
   font-size: 16px;
@@ -87,7 +89,7 @@ h3 {
 } */
 
 h1 {
-  font-size: var(--stepUp1);
+  font-size: var(--stepUp2);
   text-align: center;
 }
 /* 
@@ -96,7 +98,7 @@ article h1 {
 } */
 
 h2 {
-  font-size: var(--baseFontSize);
+  font-size: var(--stepUp1);
   text-align: center;
   margin-top: 2em;
 }
@@ -241,7 +243,6 @@ pre code.langauge-bash {
   margin-top: 25px;
   margin-bottom: 25px;
   min-height: 100px;
-  width: 100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -534,6 +535,22 @@ li.essay .meta {
   font-size: var(--stepDown1);
   margin-bottom: 3px;
 }
+
+@media (--medium-window) {
+  .face {
+    text-align: left;
+  }
+  body.home .date,
+  body.blog .date,
+  body.post .date {
+    text-align: left;
+  }
+  h1, h2, h3 {
+    text-align: left;
+  }
+}
+
+
 /* 
 @media (--narrow-window) {
   :root {
