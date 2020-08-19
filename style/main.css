@@ -174,23 +174,14 @@ $cascadia-code-ver: 2007.01;
   unicode-range: U+1F00-1FFF;
 }
 
-
-/* 
-@font-face{
-  font-family: 'Source Sans Variable';
-  font-weight: 200 900;
-  font-style: italic;
-  font-stretch: normal;
-  src: url('/fonts/SourceSansVariable-Italic.otf.woff2') format('woff2');
-} */
-
+@custom-media --medium-window (min-width: 600px);
+@custom-media --large-window (min-width: 750px);
 
 :root {
-  --sans-font-stack: "Source Sans Variable", -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, "Segoe UI", "Helvetica Neue", Arial, sans-serif; 
+  --sans-font-stack: "Source Sans Variable", -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Segoe UI", "Helvetica Neue", Arial, sans-serif; 
   --mono-font-stack: "Cascadia Code Variable", "SF Mono", "Menlo", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", Courier, monospace;
-  --columnWidth: 550px;
+  --columnWidth: 600px;
   --heroImageWidth: calc(var(--columnWidth) * 1.2);
   --baseFontSize: 1rem;
   --monoFontSize: 0.8rem;
@@ -221,13 +212,21 @@ $cascadia-code-ver: 2007.01;
   }
 }
 
-/* @custom-media --narrow-window (max-width: 632px); */
-
-@custom-media --medium-window (min-width: 600px);
-
 html {
   font-size: 16px;
   font-weight: 400;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures contextual;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+}
+
+@media (--medium-window) {
+  html {
+    font-size: 17px;
+  }
 }
 
 body {
@@ -242,7 +241,86 @@ body {
 body header {
   margin-top: 3em;
   margin-bottom: 1em;
+  max-width: var(--columnWidth);
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+body header .face {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  height: 60px;
+  width: 60px;
+}
+
+body header .face img {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body header .name {
+  font-size: var(--stepUp1);
+  font-weight: 700;
+  text-align: center;
+}
+
+body header .quote {
+  display: none;
+  
+}
+
+/* 
+.face .text {
+  width: 425px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.face .text p {
+  font-size: 15px;
+} */
+
+@media (--medium-window) {
+  body header .face {
+    margin-left: 0;
+  }
+  body header .name {
+    text-align: left;
+  }
+  body header .quote {
+    display: block;
+    color: var(--text-color-secondary);
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: 350;
+    text-indent: -0.40em;
+  }
+}
+
+@supports ( hanging-punctuation: first) {
+  body header .quote {
+    text-indent: 0;
+    hanging-punctuation: first;
+  }
+}
+
+@media (--large-window) {
+  body header .quote {
+    font-size: var(--stepUp1); 
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+}
+
 
 h1,
 h2,
@@ -418,35 +496,6 @@ pre code.langauge-bash {
 
 #tools a {
   color: #777;
-}
-
-.face {
-  max-width: var(--columnWidth);
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  min-height: 100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.face img {
-  border-radius: 100%;
-  margin-right: 24px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.face .text {
-  width: 425px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-}
-
-.face .text p {
-  font-size: 15px;
 }
 
 footer .face {
@@ -720,9 +769,6 @@ li.essay .meta {
 }
 
 @media (--medium-window) {
-  .face {
-    text-align: left;
-  }
   body.home .date,
   body.blog .date,
   body.post .date {
