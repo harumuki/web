@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var postcss = require('gulp-postcss');
 var postcssimport = require('postcss-import');
+var postcsssimplevars = require('postcss-simple-vars');
 var presetenv = require('postcss-preset-env');
 var shell = require('gulp-shell');
 var cssnano = require('cssnano');
@@ -41,6 +42,7 @@ gulp.task('photos', function () {
 gulp.task('css', function () {
   let plugins = [
     postcssimport,
+    postcsssimplevars,
     presetenv({ browsers: ['last 2 versions'], stage: 0, }),
     cssnano
   ];
