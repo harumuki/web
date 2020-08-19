@@ -229,6 +229,14 @@ html {
   }
 }
 
+@media (--large-window) {
+  html {
+    font-size: 18px;
+  }
+}
+
+
+
 body {
   font-family: var(--sans-font-stack);
   font-variation-settings: 'wdth' 400;
@@ -706,6 +714,16 @@ div.youtube .video-container embed {
 div.hero > img,
 div.photo > img {
   width: 100%;
+  /* border-radius: 20px; */
+}
+
+
+@media (--large-window) {
+  div.hero > img,
+  div.photo > img {
+    width: 100%;
+    border-radius: 20px;
+  }
 }
 
 div.hero > .credit,
