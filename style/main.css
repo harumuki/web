@@ -4,9 +4,142 @@
 
 /*!  duncan.dev | github.com/duncan/website */
 
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Roman.subset.woff2') format('woff2');
+  unicode-range: U+20-7E,U+A0,U+A9,U+BA,U+370-3FF,U+200D,U+2014,U+2019,U+201C,U+201D,U+2022,U+2026,U+260E,U+2695,U+269B,U+270A,U+E800,U+E813,U+E81E,U+E81F,U+F300,U+FE0F,U+1F198,U+1F1EC,U+1F1F7,U+1F1F8,U+1F1FA,U+1F30D,U+1F30E,U+1F3D6,U+1F3DC,U+1F3DE,U+1F3E0,U+1F3E1,U+1F3FF,U+1F468,U+1F469,U+1F489,U+1F4E2,U+1F4F2,U+1F4F7,U+1F4F8,U+1F514,U+1F5A5,U+1F631,U+1F637,U+1F680,U+1F698,U+1F6F3,U+1F956,U+1F9A0;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Roman.latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Roman.latin_ext_a.woff2') format('woff2');
+  unicode-range: U+0100-017F;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Roman.latin_ext_b.woff2') format('woff2');
+  unicode-range: U+0180-024F;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Roman.latin_rest.woff2') format('woff2');
+  unicode-range: U+0259-03C0,U+1E00-1EFF,U+2000-FB02;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Roman.greek.woff2') format('woff2');
+  unicode-range: U+0370-03FF;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Roman.greek_ext.woff2') format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+
+/* */
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Italic.latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Italic.latin_ext_a.woff2') format('woff2');
+  unicode-range: U+0100-017F;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Italic.latin_ext_b.woff2') format('woff2');
+  unicode-range: U+0180-024F;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Italic.latin_rest.woff2') format('woff2');
+  unicode-range: U+0259-03C0,U+1E00-1EFF,U+2000-FB02;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Italic.greek.woff2') format('woff2');
+  unicode-range: U+0370-03FF;
+}
+
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Italic.greek_ext.woff2') format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+
+
+/* */
+
+/* 
+@font-face{
+  font-family: 'Source Sans Variable';
+  font-weight: 200 900;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('/fonts/SourceSansVariable-Italic.otf.woff2') format('woff2');
+} */
+
+
 :root {
-  --sans-font-stack: -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans,
-    Ubuntu, Cantarell, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --sans-font-stack: "Source Sans Variable", -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans,
+    Ubuntu, Cantarell, "Segoe UI", "Helvetica Neue", Arial, sans-serif; 
   --mono-font-stack: "Cascadia Code", "SF Mono", "Menlo", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", Courier, monospace;
   --columnWidth: 550px;
