@@ -6,7 +6,7 @@ date: 2020-08-22T10:50:00.0+03:00
 
 Not even close. 
 
-In The New Yorker, [Eric Lach tells the story of the 1876 election between Tilden and Hayes][1], where things got so bad that three Southern states each sent conflicting certifications of who won. The price that Democrats extracted from Republicans to concede ended Reconstruction and ushered in 
+In The New Yorker, [Eric Lach tells the story of the 1876 election between Tilden and Hayes][1], where things got so bad that three Southern states each sent conflicting certifications of who won. The price that Democrats extracted from Republicans to concede ended Reconstruction and ushered in the Jim Crow era.
 
 It’s a horrifying blueprint for what’s possible this fall in the upcoming elections. Even more worrisome, Lach goes on to describe the scenarios that the current day bi-partisan [Transition Integrity Project][2] hosted in June to game out what might happen this year:
 
