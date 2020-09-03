@@ -20,7 +20,7 @@ font_ranges = {
 font_output_files = []
 
 def subset(input, output, range)
-  cmd = "pyftsubset #{input} --output-file=#{output} --unicodes=\"#{range}\" --flavor=woff2 --layout-features=\"kern,liga,calt,rvrn,locl,onum,pnum,smcp,c2sc,lnum,tnum,subs,sups,dlig,salt,zero\""
+  cmd = "pyftsubset #{input} --output-file=#{output} --unicodes=\"#{range}\" --flavor=woff2 --layout-features=\"#{font_layout_features}\""
   puts cmd
   `#{cmd}`
 end
