@@ -6,7 +6,10 @@ directory "node_modules" do
 end
 
 font_source_files = Rake::FileList.new("content/fonts/CascadiaCode-2007.01.woff2", "content/fonts/SourceSansVariable-Italic.3.006R.woff2", "content/fonts/SourceSansVariable-Roman.3.006R.woff2")
-font_layout_features = "kern,liga,calt,rvrn,locl,onum,pnum,smcp,c2sc,lnum,tnum,subs,sups,dlig,salt,zero"
+
+def font_layout_features 
+  "kern,liga,calt,rvrn,locl,onum,pnum,smcp,c2sc,lnum,tnum,subs,sups,dlig,salt,zero"
+end
 
 font_ranges = {
   "latin" => "U+0000-00FF",
