@@ -1,5 +1,5 @@
 
-task :default => ["node_modules", :fonts]
+task :default => [:fonts, :gulp]
 
 directory "node_modules" do
   `npm i`
@@ -39,3 +39,7 @@ font_source_files.each do |input|
 end
 
 task :fonts => font_output_files
+
+task :gulp => "node_modules" do
+  sh "npx gulp"
+end
