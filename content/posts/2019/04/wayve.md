@@ -2,7 +2,7 @@
 date: 2019-04-02T17:25:00.0+00:00
 ---
 
-Cambridge-based Wayve is taking an approach to [autonomous driving that can drive on roads it hasn't seen before](https://wayve.ai/blog/driving-like-human). 
+Cambridge-based Wayve is taking an approach to [autonomous driving that can drive on roads it hasn't seen before](https://wayve.ai/blog/learning-to-drive-like-a-human). 
 
 > We don’t tell the car how to drive with hand coded rules: everything is learned from data. This allows us to navigate complex, narrow urban European streets for the first time.
 
