@@ -215,7 +215,7 @@ $cascadia-code-ver: 2007.01;
 }
 
 html {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
   font-kerning: normal;
   font-variant-ligatures: common-ligatures contextual;
@@ -227,13 +227,13 @@ html {
 
 @media (--medium-window) {
   html {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 
 @media (--large-window) {
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
